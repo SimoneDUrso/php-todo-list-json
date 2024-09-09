@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             url: 'server.php',
-            todoList: [],
+            emptyTodoArray: [],
         }
     },
 
@@ -12,6 +12,7 @@ createApp({
         getTodoList(){
             axios.get(this.url).then((result) => {
                 console.log(result.data)
+                this.emptyTodoArray = result.data
             });
         }
     },

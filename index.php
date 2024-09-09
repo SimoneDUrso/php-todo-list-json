@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +16,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
+                    <div>
+                        <ul>
+                            <li v-for=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
