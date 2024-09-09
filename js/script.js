@@ -23,10 +23,10 @@ createApp({
                 done: false
             }
 
-            axios.post(this.url, newTodo).then((response) => {
-                console.log(response.data);
+            axios.post(this.url, newTodo, { headers: {'Content-Type': 'multipart/form-data'}}).then((response) => {
                 this.emptyTodoArray.push(newTodo);
                 this.newTodoName = '';
+                console.log(this.emptyTodoArray);
             })
         }
     },
