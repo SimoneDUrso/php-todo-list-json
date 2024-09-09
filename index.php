@@ -19,7 +19,7 @@
                     <h1 class="text-center my-4">ToDo List</h1>
 
                     <!-- Form per aggiungere nuovi Todo -->
-                    <form @click="addTodo">
+                    <form @submit.prevent="addTodo">
                         <div class="mb-3">
                             <input type="text" v-model="newTodoName" placeholder="Inserisci un nuovo ToDo" class="form-control" required>
                         </div>
