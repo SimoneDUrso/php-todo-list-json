@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +16,15 @@
 </head>
 
 <body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
 
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/script.js" type="text/javascript"></script>
 </body>
