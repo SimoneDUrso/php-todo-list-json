@@ -5,6 +5,7 @@ createApp({
         return {
             url: 'server.php',
             emptyTodoArray: [],
+            newTodoName: '',
         }
     },
 
@@ -14,6 +15,9 @@ createApp({
                 console.log(result.data)
                 this.emptyTodoArray = result.data
             });
+        },
+        addTodo(){
+
         }
     },
 

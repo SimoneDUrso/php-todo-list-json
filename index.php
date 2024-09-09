@@ -16,11 +16,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div>
-                        <ul>
-                            <li v-for=""></li>
-                        </ul>
-                    </div>
+                    <h1 class="text-center my-4">ToDo List</h1>
+
+                    <!-- Form per aggiungere nuovi Todo -->
+                    <form @click="addTodo">
+                        <div class="mb-3">
+                            <input type="text" v-model="newTodoName" placeholder="Inserisci un nuovo ToDo" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Aggiungi ToDo</button>
+                    </form>
+
+                    <!-- Lista di Todo -->
+                    <ul class="list-group mt-4">
+                        <li v-for="todo in emptyTodoArray" :key="todo.id" class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ todo.name }}
+                            <span :class="{'text-success': todo.done, 'text-danger': !todo.done}">
+                                {{ todo.done ? 'Completato' : 'Da fare' }}
+                            </span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
